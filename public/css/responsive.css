@@ -1,0 +1,336 @@
+/* Large desktop :1920px. */
+@media (min-width: 1501px) and (max-width: 2300px) {
+}
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .container, .wrapper.boxed-layout, .wrapper.boxed-layout .sticky, .wrapper.box-layout, .wrapper.box-layout .sticky {width: 970px}
+    .mobile-menu-area {display: block}
+    .single-video-content ul li {
+      margin-right: 5px;
+    }	
+    .single-video-content, .popular-area .single-video-content, .category-area .single-video-content  {
+      padding: 18px 18px 12px;
+    }
+    .newsletter {
+      padding: 35px 60px 40px;
+    }
+    .main-footer .col-md-3{width: 24%}
+    .main-footer .col-md-3:last-child{width: 28%}
+    .advertizement.ml-70.mr-70{margin: 0}
+    
+    .single-slide.height-100vh {
+  height: auto;
+  padding: 300px 0;
+}
+.blog-right-sidebar-bottom ul li a {
+  margin: 0 10px 10px 0;
+  padding: 8px 10px;
+}    
+.team-icon > a {
+  margin: 0 7px;
+}    
+    
+    
+    
+    
+    
+    
+}
+ 
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container, .wrapper.boxed-layout, .wrapper.box-layout {width:750px}
+    .mobile-menu-area {display: block}
+    .wrapper.boxed-layout .sticky, .wrapper.box-layout .sticky {width: 750px;}
+    .sticky {position: inherit;}  
+    .sticky .logo img {width: auto;}
+    .smasu {padding: 60px 20px}
+    .slide-content h1, .home-banner-content h1 {
+      font-size: 45px;
+      line-height: 50px;
+    }
+    .slide-content h2 {
+      font-size: 40px;
+      line-height: 45px;
+    }
+    .single-video-content ul li {
+      margin-right: 5px;
+    }	
+    .single-video-content, .popular-area .single-video-content, .category-area .single-video-content  {
+      padding: 18px 18px 12px;
+    }
+    .advertizement.ml-70.mr-70{margin: 0}
+.single-slide.height-100vh {
+  height: auto;
+  padding: 300px 0;
+}
+    
+ .single-video-content h5 {
+  font-size: 14px;
+}   
+.blog-video-img {
+  width: inherit;
+}    
+ .blog-video-text {
+  width: inherit;
+}   
+ .blog-right-sidebar-bottom ul li a {
+  margin: 0 12px 12px 0;
+  padding: 8px 18px;
+}   
+.contact-single {
+  padding-right: 2px;
+}    
+ .cntct-adrs i {
+  margin-right: 5px;
+}   
+.blog-right-sidebar {
+  margin-top: 50px;
+}     
+.minimal-img {
+  margin-top: 50px;
+}   
+.team-icon > a {
+  font-size: 15px;
+  height: 30px;
+  line-height: 30px;
+  width: 30px;
+    margin: 0 5px;
+}
+.section-title {
+  width: 80%;
+}    
+    
+    
+    
+    
+	
+}
+    
+/* small mobile :320px. */
+@media (max-width: 767px) {
+    .container, .wrapper.boxed-layout, .wrapper.box-layout {width:300px}
+    .mobile-menu-area {display: block;}
+    #sticky-header, .wrapper.boxed-layout #sticky-header, .wrapper.box-layout #sticky-header, #sticky-header.fixed {position: inherit;}
+#sticky-header, #contact-form > input, #contact-form > textarea {width: 100%}
+    .sticky .logo img {width: auto;}
+    .newsletter {
+      padding: 35px 15px 40px;
+    }
+    .newsletter form button {
+      font-size: 10px;
+    }
+    .advertizement.ml-70.mr-70 {
+      margin: 0;
+    }
+    .portfolio-menu button {
+      font-size: 13px;
+    }
+    a.button, button {
+      padding: 0 6px;
+    }
+    .latest-area .single-video-area, .movie-area .single-video-area {
+      margin-bottom: 30px;
+    }
+    .footer-widget {
+  margin-bottom: 30px;
+}
+    .latest-area .col-md-3:last-child .single-video-area, .main-footer .col-md-3:last-child .footer-widget {
+      margin-bottom: 0px;
+    }
+    .slide-content h1, .home-banner-content h1, .slide-content h4 {
+      font-size: 20px;
+      line-height: 25px;
+    }
+    .slide-content h2 {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    .slide-content h3 {font-size: 22px;line-height: 22px}
+    .portfolio-hover span{font-size: 20px; margin-top: -10px}
+    #navigation {
+        background-color: #000;
+        border-bottom: 1px solid #e7e7e7;
+        border-top: 1px solid #e7e7e7;
+        display: none;
+        height: auto;
+        left: 0;
+        overflow: auto;
+        top: 62px;
+        width: 100%;
+    }
+    #topnav .navigation-menu {float: none; max-height: 400px;    }
+    .menu-area {
+        float: none;
+        position: relative;
+        top: -42px;
+        display: inherit;
+    }
+    .main-menu ul > li ul.submenu {
+        display: none;
+        list-style: outside none none;
+        margin: 0;
+        padding-left: 20px;
+        position: inherit;
+        width: 100%;
+    }
+    .main-menu ul > li ul.submenu.open {display: block; opacity: 1; visibility: visible}
+    .main-menu ul li {display: block; margin-bottom: 1px}
+    .main-menu ul li ul.submenu.megamenu > li {width: 100%}
+    .main-menu ul li ul.submenu.megamenu {white-space: inherit}
+    .main-menu ul li a i {float: right}
+    .main-menu ul li ul.submenu.open {background-color: #000; top: 0px}
+    .main-menu ul li:hover a, .main-menu ul li ul.submenu li a, .main-menu ul li ul.submenu li:hover > a, .main-menu ul li ul.submenu.megamenu > li:hover > a{color: #fff}
+    #topnav .navbar-toggle {
+        border: 0 none;
+        cursor: pointer;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 40px;
+    }
+    #topnav .navbar-toggle .lines {
+        display: block;
+        height: 15px;
+        margin: 13px auto;
+        position: relative;
+        width: 25px;
+    }
+    #topnav .navbar-toggle span {
+        background-color: #fff;
+        display: block;
+        height: 1px;
+        margin-bottom: 5px;
+        transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+        width: 100%;
+    }
+    #topnav .navbar-toggle.open span {position: absolute}
+    #topnav .navbar-toggle span {background-color: #191b1d}
+    #topnav .navbar-toggle span:last-child {margin-bottom: 0; width: 75%    }
+    #topnav .navbar-toggle.open span:nth-child(2) {visibility: hidden}
+    #topnav .navbar-toggle.open span:last-child {top: 6px; transform: rotate(-45deg); width: 100%}
+    #topnav .navbar-toggle.open span:first-child {top: 6px; transform: rotate(45deg)}
+    .menu-item {border: 1px solid #ddd; float: right}
+    .search-btn {margin-right: 20px}
+    .search {top: 88px}
+    .stick .search {top: 53px}
+    .animated-background .banner-content-area {top: 35%}
+    .smasu{padding: 0 20px}
+    .smasu {padding: 60px 20px}
+    .mean-container a.meanmenu-reveal {
+  margin-top: -54px;
+}
+.single-slide.height-100vh {
+  height: auto;
+  padding: 190px 0;
+}  
+.advertizement h2 {
+  font-size: 18px;
+}    
+ .newsletter-area {
+  padding: 0;
+}   
+.pb-90 {
+  padding-bottom: 50px;
+}    
+ .pt-90 {
+  padding-top: 50px;
+}   
+.pb-85 {
+  padding-bottom: 50px;
+}    
+ 
+blockquote {
+  padding: 14px 20px;
+}    
+    
+ .ptb-60 {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}   
+.ptb-90 {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}    
+ .about-info h4 {
+  font-size: 20px;
+}   
+.pt-60 {
+  padding-top: 20px;
+}    
+.section-title {
+  width: 100%;
+}    
+ .pt-85 {
+  padding-top: 50px;
+}   
+.contact-single {
+  width: 100%;
+}    
+.blog-middle-mrg {
+  margin: 32px 0 33px;
+}    
+ .blog-img-details {
+  padding-left: 77px;
+}   
+h2.page-title {
+  font-size: 35px;
+}   
+.blog-right-sidebar {
+  margin-top: 50px;
+}    
+.mb-60 {
+  margin-bottom: 40px;
+}    
+ .pb-60 {
+  padding-bottom: 50px;
+}
+.about-minimal > h2 {
+  font-size: 20px;
+}    
+.minimal-img {
+  margin-top: 30px;
+}    
+.count-title h2 {
+  margin: 5px 0 15px;
+}    
+ .team-icon > a {
+  font-size: 15px;
+  height: 30px;
+  line-height: 30px;
+  width: 30px;
+    margin: 0 5px;
+}   
+    
+    
+    
+    
+    
+}
+ 
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .container {width:450px}
+    .wrapper.boxed-layout, .wrapper.box-layout {width:450px}
+    .slide-content h1, .home-banner-content h1, .slide-content h4 {
+      font-size: 30px;
+      line-height: 35px;
+    }
+    .slide-content h2 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+    .slide-content h3 {font-size: 32px;line-height: 32px}
+    .portfolio-menu button {
+      font-size: 15px;
+    }
+    a.button, button {
+      padding: 0 14px;
+    }
+    .newsletter {
+      padding: 35px 35px 40px;
+    }
+}
