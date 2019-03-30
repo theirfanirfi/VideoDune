@@ -18,3 +18,5 @@ use Illuminate\Http\Request;
 // });
 Route::post('login', 'APIController@login');
 Route::post('register', 'APIController@register');
+Route::post('savesettings', 'APIController@savesettings');
+Route::get('getsettings', 'APIController@getsettings');
