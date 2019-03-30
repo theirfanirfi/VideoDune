@@ -1,8 +1,13 @@
+@extends('Frontend._PublicLayout')
+@section('content')
+
+
+
 <section class="blog-details-area pt-30 pb-90">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                <di v class="blog-details-left">
+                <div class="blog-details-left">
                     <div class="blog-part">
                         <div class="blog-info">
                             <h3>Lorem Ipsum is simply dummy text of the printing</h3>
@@ -91,3 +96,4 @@
         </div>
     </div>
 </section>
+@endsection

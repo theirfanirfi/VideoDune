@@ -40,8 +40,7 @@
                                 <div class="col-sm-6 hidden-xs">
                                     <div class="top-left">
                                         <ul>
-                                            <li><a href="#">Upload Video</a></li>
-                                            <li><a href="#">Login/Register</a></li>
+                                            <li><a href="{{ route('login') }}">Login</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -70,28 +69,11 @@
                                     <div class="main-menu text-right">
                                         <nav>
                                             <ul>
-                                                <li class="active"><a href="index.html">Home</a>
-                                                    <ul>
-                                                        <li><a href="index.html">Home Version One</a></li>
-                                                        <li><a href="index-2.html">Home Version Two</a></li>
-                                                    </ul>
+                                                <li class="active"><a href="{{ route('home') }}">Home</a>
                                                 </li>
-                                                <li><a href="about-us.html">About us</a></li>
-                                                <li><a href="videos.html">Videos</a>
-                                                    <ul>
-                                                        <li><a href="fashion.html">Fashion</a></li>
-                                                        <li><a href="sports.html">Sports</a></li>
-                                                        <li><a href="food-drinks.html">Food & Drinks</a></li>
-                                                        <li><a href="entertainment.html">Entertainment</a></li>
-                                                    </ul>
+                                                <li><a href="{{ route('videos') }}">Videos</a></li>
+                                                <li><a href="{{ route('myvideos') }}">My Videos</a></li>
                                                 </li>
-                                                <li><a href="blog.html">Blog</a>
-                                                    <ul>
-                                                        <li><a href="blog.html">Blog</a></li>
-                                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="contact-us.html">contact</a></li>
                                             </ul>
                                         </nav>
                                     </div>

@@ -30,7 +30,7 @@
                                             </div>
                                         </div>
                                         <div class="single-video-content">
-                                            <h5><a href="blog-details.html">Best Consert Ever Seen</a></h5>
+                                            <h5><a href="{{ route('video',['id' => 3]) }}">Best Consert Ever Seen</a></h5>
                                             <p>Maksud Reza</p>
                                             <ul>
                                                 <li><i class="icofont icofont-heart"></i>255</li>
@@ -47,13 +47,13 @@
                                                 <a href="#"><img src="images/blog/9.jpg" alt=""></a>
                                             </div>
                                             <div class="video-icon">
-                                                <a href="blog-details.html">
+                                                <a href="{{ route('video',['id' => 3]) }}">
                                                     <i class="icofont icofont-play-alt-2"></i>
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="single-video-content">
-                                            <h5><a href="blog-details.html">Best Consert Ever Seen</a></h5>
+                                            <h5><a href="{{ route('video',['id' => 3]) }}">Best Consert Ever Seen</a></h5>
                                             <p>Maksud Reza</p>
                                             <ul>
                                                 <li><i class="icofont icofont-heart"></i>255</li>
@@ -70,13 +70,13 @@
                                                 <a href="#"><img src="images/blog/10.jpg" alt=""></a>
                                             </div>
                                             <div class="video-icon">
-                                                <a href="blog-details.html">
+                                                <a href="{{ route('video',['id' => 3]) }}">
                                                     <i class="icofont icofont-play-alt-2"></i>
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="single-video-content">
-                                            <h5><a href="blog-details.html">Best Consert Ever Seen</a></h5>
+                                            <h5><a href="{{ route('video',['id' => 3]) }}">Best Consert Ever Seen</a></h5>
                                             <p>Maksud Reza</p>
                                             <ul>
                                                 <li><i class="icofont icofont-heart"></i>255</li>
@@ -93,12 +93,12 @@
                                                 <a href="#"><img src="images/blog/11.jpg" alt=""></a>
                                             </div>
                                             <div class="video-icon">
-                                                <a href="blog-details.html">
+                                                <a href="{{ route('video',['id' => 3]) }}">
                                                     <i class="icofont icofont-play-alt-2"></i>
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="single-video-content">
+                                        <div class="{{ route('video',['id' => 3]) }}">
                                             <h5><a href="blog-details.html">Best Consert Ever Seen</a></h5>
                                             <p>Maksud Reza</p>
                                             <ul>
@@ -116,7 +116,7 @@
                                                 <a href="#"><img src="images/blog/10.jpg" alt=""></a>
                                             </div>
                                             <div class="video-icon">
-                                                <a href="blog-details.html">
+                                                <a href="{{ route('video',['id' => 3]) }}">
                                                     <i class="icofont icofont-play-alt-2"></i>
                                                 </a>
                                             </div>
@@ -139,13 +139,13 @@
                                                 <a href="#"><img src="images/blog/11.jpg" alt=""></a>
                                             </div>
                                             <div class="video-icon">
-                                                <a href="blog-details.html">
+                                                <a href="{{ route('video',['id' => 3]) }}">
                                                     <i class="icofont icofont-play-alt-2"></i>
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="single-video-content">
-                                            <h5><a href="blog-details.html">Best Consert Ever Seen</a></h5>
+                                            <h5><a href="{{ route('video',['id' => 3]) }}">Best Consert Ever Seen</a></h5>
                                             <p>Maksud Reza</p>
                                             <ul>
                                                 <li><i class="icofont icofont-heart"></i>255</li>
