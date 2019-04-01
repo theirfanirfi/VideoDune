@@ -20,3 +20,4 @@ Route::post('login', 'APIController@login');
 Route::post('register', 'APIController@register');
 Route::post('savesettings', 'APIController@savesettings');
 Route::get('getsettings', 'APIController@getsettings');
+Route::post('uploadvideo','APIController@uploadVideo');

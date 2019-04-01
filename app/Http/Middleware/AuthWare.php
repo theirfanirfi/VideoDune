@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-
+use Auth;
 class AuthWare
 {
     /**
@@ -15,6 +15,10 @@ class AuthWare
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+        if(Auth::check()){
+            return $next($request);
+        }else {
+            return redirect('/')->with('error','To perform this action, you need to login.');
+        }
     }
 }

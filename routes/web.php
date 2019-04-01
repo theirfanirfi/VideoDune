@@ -12,7 +12,14 @@
 */
 
 Route::get('/login', 'LoginController@index')->name('login');
+Route::get('/logout', 'LoginController@logout')->name('logout');
+Route::post('/signin', 'LoginController@signin')->name('signin');
+
+
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/video/{id}', 'HomeController@Video')->name('video');
 Route::get('/videos', 'HomeController@Videos')->name('videos');
-Route::get('/myvideos', 'HomeController@myvideos')->name('myvideos');
+
+
+Route::get('/myvideos', 'HomeController@myvideos')->name('myvideos')->middleware('AuthWare');
+Route::get('/likevideo/{id}', 'HomeController@likevideo')->name('likevideo')->middleware('AuthWare');

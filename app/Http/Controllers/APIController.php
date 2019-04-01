@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\MyClasses\VerifyToken as VT;
 use App\User;
 use App\Settings as ST;
+use App\Videos as Vid;
 use Illuminate\Support\Facades\Hash;
 class APIController extends Controller
 {
@@ -130,7 +131,7 @@ class APIController extends Controller
             }else {
                 $st = ST::where(['user_id' => $user->id]);
                 if($st->count() > 0){
-                    $st = $st->first();
+                    $st = $st->orderBy('id','DESC')->last();
                     return response()->json([
                         'isAuthenticated' => true,
                         'message' => "Settings found",
@@ -199,5 +200,79 @@ class APIController extends Controller
         }
 
 
+    }
+
+
+    public function uploadVideo(Request $req){
+
+
+        $token = $req->input('token');
+        $hash_tag = $req->input('hash_tag');
+        $fbid = $req->input('facebook_id');
+        $email = $req->input('email');
+
+
+        if($token == "" || $hash_tag == "" || $fbid == "" || $email == ""){
+            return response()->json([
+                'error' => true,
+                'isEmpty' => true,
+                'message' => "None of the field can be empty"
+            ]);
+        }else if(!$req->hasFile('video')){
+            return response()->json([
+                'error' => true,
+                'isEmpty' => true,
+                'message' => "Video must be recorded."
+            ]);
+        }else {
+            $vt = new VT();
+            $user = $vt->verifyTokenInDb($token);
+            if(!$user){
+                return response()->json([
+                    'error' => true,
+                    'isAuthenticated' => false,
+                    'message' => "Please Login to perform this action."
+                ]);
+            }else {
+                $path = "./mvideos/";
+                $vd = new Vid();
+                $vd->user_id = $user->id;
+                $vd->hash_tag = $hash_tag;
+                $vd->facebook_id = $fbid;
+                $vd->email = $email;
+                $file = $req->file('video');
+                $video_name = $file->getClientOriginalName();
+                if($file->move($path,$video_name)){
+                    $vd->video_name = $video_name;
+                    if($vd->save()){
+                        return response()->json([
+                            'error' => false,
+                            'isAuthenticated' => true,
+                            'isVideoUploaded' => true,
+                            'video' => $vd,
+                            'isSaved' => true,
+                            'message' => "Video Uploaded."
+                        ]);
+                    }else {
+
+                        return response()->json([
+                            'error' => true,
+                            'isAuthenticated' => true,
+                            'isVideoUploaded' => true,
+                            'isSaved' => false,
+                            'message' => "Video Uploaded but not saved."
+                        ]);
+                    }
+                }else {
+
+                    return response()->json([
+                        'error' => true,
+                        'isAuthenticated' => true,
+                        'isVideoUploaded' => false,
+                        'message' => "Error occurred in uploading the video. Please try again."
+                    ]);
+                }
+            }
+        }
     }
 }

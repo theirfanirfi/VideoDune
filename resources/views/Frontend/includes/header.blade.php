@@ -40,7 +40,12 @@
                                 <div class="col-sm-6 hidden-xs">
                                     <div class="top-left">
                                         <ul>
+                                            @if(!Auth::check())
                                             <li><a href="{{ route('login') }}">Login</a></li>
+                                            @else
+                                            <li><a href="{{ route('logout') }}">Logout</a></li>
+
+                                            @endif
                                         </ul>
                                     </div>
                                 </div>
@@ -62,7 +67,7 @@
                             <div class="row">
                                 <div class="col-md-3 col-xs-8">
                                     <div class="header-logo">
-                                        <a href="index.html"><img src="images/logo/logo.png" alt="logo" /></a>
+                                        <a href="index.html"><img src="{{ URL::asset('images/logo/logo.png') }}" alt="logo" /></a>
                                     </div>
                                 </div>
                                 <div class="col-md-9 col-xs-12">
@@ -72,7 +77,9 @@
                                                 <li class="active"><a href="{{ route('home') }}">Home</a>
                                                 </li>
                                                 <li><a href="{{ route('videos') }}">Videos</a></li>
+                                                @if(Auth::check())
                                                 <li><a href="{{ route('myvideos') }}">My Videos</a></li>
+                                                @endif
                                                 </li>
                                             </ul>
                                         </nav>

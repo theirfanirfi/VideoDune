@@ -5,7 +5,7 @@
             <div class="row">
                <div class="col-xs-12">
                    <div class="footer-logo">
-                       <a href="index.html"><img src="images/logo/logo-2.png" alt="videodune"></a>
+                       <a href="index.html"><img src="{{ URL::asset('images/logo/logo-2.png') }}" alt="videodune"></a>
                        <p>It is a long maksurez fact that a reader will be distracted by the readable content</p>
                    </div>
                </div>
@@ -48,19 +48,19 @@
                         <p>Banasree, Rampura, Dhaka</p>
                     </div>
                 </div>
-                <div class="col-md-3 hidden-sm col-xs-12">
+                <!-- <div class="col-md-3 hidden-sm col-xs-12">
                     <div class="footer-widget">
                         <h2>related videos</h2>
                         <div class="footer-img">
-                            <a href="#"><img src="images/footer/1.jpg" alt=""></a>
-                            <a href="#"><img src="images/footer/2.jpg" alt=""></a>
-                            <a href="#"><img src="images/footer/3.jpg" alt=""></a>
-                            <a href="#"><img src="images/footer/4.jpg" alt=""></a>
-                            <a href="#"><img src="images/footer/5.jpg" alt=""></a>
-                            <a href="#"><img src="images/footer/6.jpg" alt=""></a>
+                            <a href="#"><img src="{{ URL::asset('images/footer/1.jpg') }}" alt=""></a>
+                            <a href="#"><img src="{{ URL::asset('images/footer/2.jpg') }}" alt=""></a>
+                            <a href="#"><img src="{{ URL::asset('images/footer/3.jpg') }}" alt=""></a>
+                            <a href="#"><img src="{{ URL::asset('images/footer/4.jpg') }}" alt=""></a>
+                            <a href="#"><img src="{{ URL::asset('images/footer/5.jpg') }}" alt=""></a>
+                            <a href="#"><img src="{{ URL::asset('images/footer/6.jpg') }}" alt=""></a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
