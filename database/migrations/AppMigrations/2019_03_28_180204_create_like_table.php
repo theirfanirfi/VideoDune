@@ -18,9 +18,7 @@ class CreateLikeTable extends Migration
             $table->increments('id');
             $table->integer('liker_id')->unsigned()->default(0);
             $table->integer('video_id')->unsigned()->default(0);
-            $table->integer('videoer_id')->unsigned()->default(0);
             $table->foreign('liker_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('videoer_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
 
         });

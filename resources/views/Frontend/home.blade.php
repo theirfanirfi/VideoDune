@@ -8,6 +8,8 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
+                                    @include('Frontend.includes.alert')
+
                                 <div class="section-title text-center">
                                     <h2 class="text-uppercase">latest videos</h2>
                                     <i class="icofont icofont-video-cam"></i>
@@ -19,30 +21,30 @@
 
                                 @foreach ($videos as $v )
                                 <div class="col-md-3 col-sm-4 col-xs-12">
-                                        <div class="single-video-area">
-                                            <div class="video-img">
-                                                <div class="game">
-                                                        <video  alt="" style="width:100%;" controls muted>
-                                                                <source src="{{ URL::asset('/mvideos/') }}/{{ $v->video_name }}" type="video/mp4">
-                                                                </video>
-                                                </div>
-                                            <!--    <div class="video-icon" >
-                                                    <a href="blog-details.html">
-                                                        <i class="icofont icofont-play-alt-2"></i>
-                                                    </a>
-                                                </div> -->
+                                    <div class="single-video-area">
+                                        <div class="video-img">
+                                            <div class="game">
+                                                <a href="#"><video  alt="" style="width:100%;" controls muted>
+                                                    <source src="{{ URL::asset('/mvideos/') }}/{{ $v->video_name }}" type="video/mp4">
+                                                </video></a>
                                             </div>
-                                            <div class="single-video-content">
-                                                <h5><a href="{{ route('video',['id' => 3]) }}">{{ $v->video_name }}</a></h5>
-                                                <p>{{ $v->name }}</p>
-                                                <ul>
-                                                    <li><i class="icofont icofont-heart"></i>255</li>
-                                                   <!-- <li><i class="icofont icofont-eye-alt"></i>788</li> -->
-                                                    <li><i class="icofont icofont-ui-clock"></i>{{ substr($v->created_at,0,10) }}</li>
-                                                </ul>
+                                            <div class="video-icon">
+                                                <a href="{{ route('video',['id' => $v->id]) }}">
+                                                    <i class="icofont icofont-play-alt-2"></i>
+                                                </a>
                                             </div>
                                         </div>
+                                        <div class="single-video-content">
+                                            <h5><a href="{{ route('video',['id' => $v->id]) }}">{{ $v->video_name }}</a></h5>
+                                            <p>{{ $v->getVideoAuthor() }}</p>
+                                            <ul>
+                                                <li><a href="{{ route('likevideo',['id' => $v->id]) }}"><i class="icofont icofont-heart" @if($v->checkWhetherLikedOrNot() > 0) {{ $v->checkWhetherLikedOrNot() }} style="color:red;" @endif></i></a> @if( $v->getVideoLikesCount() > 0) {{ $v->getVideoLikesCount() }} @endif</li>
+                                               <!-- <li><i class="icofont icofont-eye-alt"></i>788</li> -->
+                                                <li><i class="icofont icofont-ui-clock"></i>{{ substr($v->created_at,0,10) }}</li>
+                                            </ul>
+                                        </div>
                                     </div>
+                                </div>
                                 @endforeach
 
 

@@ -4,7 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\User;
+use App\VideoLikes as VK;
 use DB;
+use Auth;
 class Videos extends Model
 {
     //
@@ -17,7 +19,9 @@ class Videos extends Model
     }
 
     public function getVideo($id){
-        $videos = DB::table('videos')->where(['videos.id' => $id])->leftjoin('users',['videos.user_id' => 'users.id'])->select('users.name','videos.*');
+        $videos = DB::table('videos')->where(['videos.id' => $id])->leftjoin('users',['videos.user_id' => 'users.id'])
+       // ->leftjoin('videolikes',[])
+        ->select('users.name','videos.*');
         return $videos;
     }
 
@@ -26,4 +30,19 @@ class Videos extends Model
         return $videos;
     }
 
+    public function checkWhetherLikedOrNot(){
+        if(Auth::check()){
+        return VK::where(['liker_id' => Auth::user()->id,'video_id' => $this->id])->count();
+        }else {
+            return 0;
+        }
+    }
+
+    public function getVideoLikesCount(){
+        return VK::where(['video_id' => $this->id])->count();
+    }
+
+    public function getVideoAuthor(){
+        return User::where(['id' => $this->user_id])->first()->name;
+    }
 }

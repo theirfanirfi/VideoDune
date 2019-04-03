@@ -5,14 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Videos;
+use App\VideoLikes as VK;
 class HomeController extends Controller
 {
     //
 
     public function index(){
-        $videos = new Videos();
-
-        return view('Frontend.home',['videos' => $videos->getVideos()->get()]);
+        $videos = Videos::all();
+//        $videos = new Videos();
+        return view('Frontend.home',['videos' => $videos]);
     }
 
 
@@ -22,19 +23,41 @@ class HomeController extends Controller
     }
 
     public function Videos(){
-        $videos = new Videos();
+        $videos = Videos::all();
 
-        return view('Frontend.videos',['videos' => $videos->getVideos()->get()]);
+        return view('Frontend.videos',['videos' => $videos]);
     }
 
     public function myvideos(){
         $user = Auth::user();
-        $videos = new Videos();
-        return view('Frontend.videos',['videos' => $videos->getMyVideos($user->id)->get()]);
-
+        $videos = Videos::where(['user_id' => $user->id])->get();
+        return view('Frontend.videos',['videos' => $videos]);
     }
 
-    public function likeVideo($id){
+    public function likevideo($id){
         $user = Auth::user();
+        $checkVideoExistence = Videos::where(['id' => $id]);
+        if($checkVideoExistence->count() > 0){
+        $v = VK::where(['liker_id' => $user->id,'video_id' => $id]);
+
+        if($v->count() > 0){
+            return redirect()->back()->with('error','You have already liked the video.');
+        }else {
+            $like = new VK();
+            $like->liker_id = $user->id;
+            $like->video_id = $id;
+
+            if($like->save()){
+                return redirect()->back()->with('success','Video Liked.');
+
+            }else {
+            return redirect()->back()->with('error','Error occurred in liking the video.');
+            }
+        }
+
+        }else {
+            return redirect()->back()->with('error','No Such Video found.');
+        }
+
     }
 }

@@ -17,14 +17,14 @@ class CreateVideoTable extends Migration
 
             $table->increments('id');
             $table->integer('user_id')->unsigned()->default(0);
-            $table->string('video_title');
-            $table->string('video_name');
-            $table->string('hash_tag');
-            $table->string('facebook_id');
-            $table->string('email');
-            $table->string('username');
-            $table->string('address');
-            $table->string('unique_user_hashtag');
+            $table->string('video_title')->nullable();
+            $table->string('video_name')->nullable();
+            $table->string('hash_tag')->nullable();
+            $table->string('facebook_id')->nullable();
+            $table->string('email')->nullable();
+            $table->string('username')->nullable();
+            $table->string('address')->nullable();
+            $table->string('unique_user_hashtag')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
 
