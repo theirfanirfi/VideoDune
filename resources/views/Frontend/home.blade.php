@@ -1,5 +1,4 @@
 @extends('Frontend._PublicLayout')
-
 @section('content')
 @include('Frontend.includes.slider')
 
@@ -35,7 +34,13 @@
                                             </div>
                                         </div>
                                         <div class="single-video-content">
-                                            <h5><a href="{{ route('video',['id' => $v->id]) }}">{{ $v->video_name }}</a></h5>
+                                            <h5><a href="{{ route('video',['id' => $v->id]) }}">
+                                                @if(!empty($v->video_title))
+                                                {{ $v->video_title }}
+                                                @else
+                                                {{ $v->video_name }}
+                                                @endif
+                                            </a></h5>
                                             <p>{{ $v->getVideoAuthor() }}</p>
                                             <ul>
                                                 <li><a href="{{ route('likevideo',['id' => $v->id]) }}"><i class="icofont icofont-heart" @if($v->checkWhetherLikedOrNot() > 0) {{ $v->checkWhetherLikedOrNot() }} style="color:red;" @endif></i></a> @if( $v->getVideoLikesCount() > 0) {{ $v->getVideoLikesCount() }} @endif</li>

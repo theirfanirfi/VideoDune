@@ -210,9 +210,10 @@ class APIController extends Controller
         $hash_tag = $req->input('hash_tag');
         $fbid = $req->input('facebook_id');
         $email = $req->input('email');
+        $videoTitle = $req->input('video_title');
 
 
-        if($token == "" || $hash_tag == "" || $fbid == "" || $email == ""){
+        if($token == "" || $hash_tag == "" || $fbid == "" || $email == "" || $videoTitle == ""){
             return response()->json([
                 'error' => true,
                 'isEmpty' => true,
@@ -240,6 +241,7 @@ class APIController extends Controller
                 $vd->hash_tag = $hash_tag;
                 $vd->facebook_id = $fbid;
                 $vd->email = $email;
+                $vd->video_title = $videoTitle;
                 $file = $req->file('video');
                 $video_name = $file->getClientOriginalName();
                 if($file->move($path,$video_name)){
