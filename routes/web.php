@@ -23,3 +23,5 @@ Route::get('/videos', 'HomeController@Videos')->name('videos');
 
 Route::get('/myvideos', 'HomeController@myvideos')->name('myvideos')->middleware('AuthWare');
 Route::get('/likevideo/{id}', 'HomeController@likevideo')->name('likevideo')->middleware('AuthWare');
+Route::get('/deletevideo/{id}', 'HomeController@deletevideo')->name('deletevideo')->middleware('AuthWare');
+Route::get('un', 'HomeController@checkUnlink');

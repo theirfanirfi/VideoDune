@@ -60,4 +60,31 @@ class HomeController extends Controller
         }
 
     }
+
+    public function deletevideo($id){
+        $user = Auth::user();
+        $video = Videos::where(['id' => $id]);
+        if($video->count() > 0){
+            $vodeo = $video->first();
+            if($vodeo->user_id == $user->id){
+                $path = public_path("mvideos");
+                if($vodeo->delete() && unlink($path."\\".$vodeo->video_name)){
+
+                    return redirect()->back()->with('success','Video deleted.');
+
+                }else {
+            return redirect()->back()->with('error','Error occurred in deleting the video. Please try again.');
+                }
+            }else {
+            return redirect('/')->with('error','This video does not belong to you.');
+
+            }
+        }else {
+            return redirect('/')->with('error','No Such Video found.');
+        }
+    }
+
+    public function checkUnlink(){
+        echo "check successful";
+    }
 }
