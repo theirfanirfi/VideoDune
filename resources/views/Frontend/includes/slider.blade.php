@@ -11,7 +11,7 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="slide-content">
-                                                        <h4 class="animated">VIDEODUNE</h4>
+                                                        <h4 class="animated">Tech Giantz</h4>
                                                         <h1 class="animated">THE WORLD BEST <span>VIDEO</span></h1>
                                                         <h2 class="animated"><span>BLOG</span> WEBSITE</h2>
                                                         <a href="#" class="btn btn-cor btn-borders hidden-xs animated">learn more</a>
@@ -35,7 +35,7 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="slide-content">
-                                                        <h4 class="animated">VIDEODUNE</h4>
+                                                        <h4 class="animated">Tech Giantz</h4>
                                                         <h1 class="animated">THE WORLD BEST <span>VIDEO</span></h1>
                                                         <h2 class="animated"><span>BLOG</span> WEBSITE</h2>
                                                         <a href="#" class="btn btn-cor btn-borders hidden-xs animated">learn more</a>

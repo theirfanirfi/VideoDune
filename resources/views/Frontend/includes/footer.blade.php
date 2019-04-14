@@ -5,7 +5,7 @@
             <div class="row">
                <div class="col-xs-12">
                    <div class="footer-logo">
-                       <a href="index.html"><img src="{{ URL::asset('images/logo/logo-2.png') }}" alt="videodune"></a>
+                       <a href="index.html"><img src="{{ URL::asset('images/logo/logo-2.png') }}" alt="Tech Giantz"></a>
                        <p>It is a long maksurez fact that a reader will be distracted by the readable content</p>
                    </div>
                </div>
@@ -33,7 +33,7 @@
                             <li><a href="#">terms &amp; conditions</a></li>
                             <li><a href="#">support</a></li>
                             <li><a href="#">video contain</a></li>
-                            <li><a href="#">about videodune</a></li>
+                            <li><a href="#">about Tech Giantz</a></li>
                         </ul>
                     </div>
                 </div>
@@ -42,8 +42,8 @@
                         <h2>quick contact</h2>
                         <p>+08801912345678</p>
                         <p>+08801912345679</p>
-                        <p><a href="#">videodune@gmail.com</a></p>
-                        <p><a href="#">bestvideoblog@gmail.com</a></p>
+                        <p><a href="#">Tech Giantz@gmail.com</a></p>
+                        <p><a href="#">Tech Giantz@gmail.com</a></p>
                         <p>Flor. 4, House. 15, Block-C
                         <p>Banasree, Rampura, Dhaka</p>
                     </div>

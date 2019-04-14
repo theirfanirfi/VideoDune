@@ -45,7 +45,7 @@
                                             <ul>
                                                 <li><a href="{{ route('likevideo',['id' => $v->id]) }}"><i class="icofont icofont-heart" @if($v->checkWhetherLikedOrNot() > 0) {{ $v->checkWhetherLikedOrNot() }} style="color:red;" @endif></i></a> @if( $v->getVideoLikesCount() > 0) {{ $v->getVideoLikesCount() }} @endif</li>
                                                 <li><i class="icofont icofont-ui-clock"></i>{{ substr($v->created_at,0,10) }}</li>
-                                                @if(Auth::check())
+                                                @if(Auth::check() && Auth::user()->id == $v->user_id )
                                                 <li><a href="{{ route('deletevideo',['id' => $v->id]) }}"><i  class="icofont icofont-trash"></i></a></li>
                                                 @endif
                                             </ul>
